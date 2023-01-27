@@ -1,10 +1,10 @@
 # hbt-projects
 Repository containig codes for projects carried out at HBT.
 
-The repository uses:
+The repository uses:\
 `Python 3.10.9 | packaged by conda-forge | (main, Jan 11 2023, 15:15:40) [MSC v.1916 64 bit (AMD64)] on win32`
 
-In a conda environment called:
+In a conda environment called:\
 `hbt-projects`
 
 ## Install
