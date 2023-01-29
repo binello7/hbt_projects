@@ -13,7 +13,7 @@ To install a new package use the command:\
 `conda install PACKAGENAME --channel conda-forge`
 
 To export the installed packages to a `requirements.txt` file run:\
-`conda list -e > requirements.txt`
+`conda list -e > requirements.txt --explicit`
 
 To install the packages listed in a `requirements.txt` file do:\
 `conda install --file requirements.txt`
