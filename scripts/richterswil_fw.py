@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from hbt import fremdwasser as fw
+from hbt_tools import fremdwasser as fw
 
 # Paths
 data_dir = Path(r"C:\Users\sru\OneDrive - Hunziker Betatech AG"
