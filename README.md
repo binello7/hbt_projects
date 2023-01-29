@@ -14,3 +14,6 @@ To install a new package use the command:\
 
 To export the installed packages to a `requirements.txt` file run:\
 `conda list -e > requirements.txt`
+
+To install the packages listed in a `requirements.txt` file do:\
+`conda install --file requirements.txt`
