@@ -57,6 +57,7 @@ https://repo.anaconda.com/pkgs/main/win-64/pyzmq-23.2.0-py310hd77b12b_0.conda
 https://conda.anaconda.org/conda-forge/win-64/qt-5.9.7-h506e8af_3.tar.bz2
 https://repo.anaconda.com/pkgs/main/win-64/sip-4.19.13-py310hd77b12b_0.conda
 https://conda.anaconda.org/conda-forge/noarch/six-1.16.0-pyh6c4a22f_0.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/tenacity-8.1.0-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/traitlets-5.8.1-pyhd8ed1ab_0.conda
 https://conda.anaconda.org/conda-forge/noarch/typing_extensions-4.4.0-pyha770c72_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/noarch/wheel-0.37.1-pyhd3eb1b0_0.conda
@@ -72,6 +73,7 @@ https://conda.anaconda.org/conda-forge/noarch/matplotlib-inline-0.1.6-pyhd8ed1ab
 https://conda.anaconda.org/conda-forge/win-64/mkl-service-2.4.0-py310hcf6e17e_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/openpyxl-3.0.9-pyhd8ed1ab_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/win-64/pillow-9.3.0-py310hdc2b20a_1.conda
+https://conda.anaconda.org/conda-forge/noarch/plotly-5.13.0-pyhd8ed1ab_0.conda
 https://repo.anaconda.com/pkgs/main/win-64/pyqt-5.9.2-py310hd77b12b_6.conda
 https://conda.anaconda.org/conda-forge/noarch/python-dateutil-2.8.2-pyhd8ed1ab_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/win-64/setuptools-65.6.3-py310haa95532_0.conda
