@@ -79,7 +79,7 @@ for loc, params in loc_params.items():
         print(f'Q = {Q:0.3f} m^3/s')
         Qnm = hd.strickler_circ_q(k_st, J, D, hm)
         print(f'Qnm  = {Qnm:0.3f} m^3/s')
-        perc_diff = Qnm / Q * 100
+        perc_diff = (Qnm - Q) / Q * 100
         print(f'{perc_diff:0.1f} % vom SOLL Abfluss')
         print(((25*'-') + '\n'))
 
@@ -109,6 +109,6 @@ for loc, params in loc_params.items():
         print(f'Q = {Q:0.3f} m^3/s')
         Qnm = hd.strickler_circ_q(k_st, J_932_933, D_932_933, hm)
         print(f'Qnm  = {Qnm:0.3f} m^3/s')
-        perc_diff = Qnm / Q * 100
+        perc_diff = (Qnm - Q) / Q * 100
         print(f'{perc_diff:0.1f} % vom SOLL Abfluss')
         print(((25*'-') + '\n'))
