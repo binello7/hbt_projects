@@ -1,18 +1,16 @@
 from datetime import datetime as dt
 from pathlib import Path
 
-import pandas as pd
 import plotly.graph_objects as go
-from hbt import utils as ut
-from hbt import utils_hbt as uh
-from IPython import embed
-from plotly.offline import plot
+from hbt_tools import utils as ut
+from hbt_tools import utils_hbt as uh
 
 # TODO
 # 1. Add missing measurement units
 
 # Globals
 dt_format = '%d.%m.%Y %H:%M'
+EZG_tot = 5.18 # ha
 
 # Settings
 # Installation: 21.04.2022 10:00
@@ -32,24 +30,22 @@ path_wateranalysis = Path(r'Q:\Projekte\10000-\10208.10 Tangente Zug'
     r'\05 Berechnungen Grundlagen\Probenehmer\Auswertung_Wasserproben.csv')
 save_path = Path(r"Q:\Projekte\10000-\10208.10 Tangente Zug"
     r"\05 Berechnungen Grundlagen\Datenauswertung\Plots")
-
-EZG_tot = 5.18 # ha
 #-------------------------------------------------------------------------------
 
 # Measurements units
 ## Ablaufmenge Q2, Zulaufmenge Q1, Niveau ASB, Niveau RFB1, Niveau RFB2
 measurements_units = {
-    917: {
-        'name': 'Durchfluss Q1',
-        'units': 'l/s',
-        'yaxis': 'y1'
-        },
+    # 917: {
+    #     'name': 'Durchfluss Q1',
+    #     'units': 'l/s',
+    #     'yaxis': 'y1'
+    #     },
 
-    918: {
-        'name': 'Durchfluss Q2',
-        'units': 'l/s',
-        'yaxis': 'y1'
-        },
+    # 918: {
+    #     'name': 'Durchfluss Q2',
+    #     'units': 'l/s',
+    #     'yaxis': 'y1'
+    #     },
 
     919: {
         'name': 'Niveau ASB',
@@ -80,13 +76,13 @@ y_axes = {
         'side': 'left',
         'position': 0.0
     },
-    'yaxis2': {
-        'title': 'Niederschlag [mm]',
-        'color': 'black',
-        'anchor': 'free',
-        'side': 'left',
-        'position': 0.1
-    },
+    # 'yaxis2': {
+    #     'title': 'Niederschlag [mm]',
+    #     'color': 'black',
+    #     'anchor': 'free',
+    #     'side': 'left',
+    #     'position': 0.1
+    # },
     'yaxis3': {
         'title': 'Niveau [m]',
         'color': 'black',
