@@ -57,7 +57,7 @@ ds = xr.open_dataset(path_raindata)
 levels = np.logspace(-1, 2, 10, base=10)
 cmap = "Blues"
 
-fig = plt.figure()
+fig = plt.figure(figsize=(21, 7))
 
 precip_field = ds.RR.isel(time=0)
 precip_field = precip_field.where(precip_field > 0)
@@ -72,8 +72,10 @@ g = precip_field.plot(
 ax = g.axes
 title = ax.title
 add_geo_features(ax)
-ax.scatter(*zollikofen_coords, s=9, c='r')
-ax.text(zollikofen_coords[0]+1e3, zollikofen_coords[1]+3e3, 'Zollikofen')
+# ax.scatter(*zollikofen_coords, s=9, c='r')
+# ax.text(zollikofen_coords[0]+1e3, zollikofen_coords[1]+3e3, 'Zollikofen')
+plt.show()
+exit()
 
 def animate(t):
     data = ds.RR.isel(time=t)
