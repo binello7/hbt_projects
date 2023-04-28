@@ -13,7 +13,7 @@ probenehmer_infos = [
     {
         'name': 'SABA Mühlestrasse',
         'id': 466,
-        'dt_from': dt(2023, 1, 26, 10),
+        'dt_from': dt(2023, 4, 3),
         'sample_vol': 5 # m3
     },
 ]
