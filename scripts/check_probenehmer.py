@@ -1,26 +1,44 @@
-from hbt_tools import utils_hbt as uh
 from datetime import datetime as dt
 from datetime import timedelta as td
+
+import pytz
+from hbt_tools import utils_hbt as uh
 
 probenehmer_infos = [
     {
         'name': 'SABA Hagnau',
         'id': 1078,
-        'dt_from': dt(2023, 1, 31, 10),
+        'dt_from': dt(2023, 7, 24, 12, tzinfo=pytz.timezone('Europe/Zurich')),
         'sample_vol': 20 # m3
     },
 
     {
         'name': 'SABA Mühlestrasse',
         'id': 466,
-        'dt_from': dt(2023, 4, 3),
+        'dt_from': dt(2023, 5, 31, tzinfo=pytz.timezone('Europe/Zurich')),
         'sample_vol': 5 # m3
+    },
+
+    {
+        'name': 'SABA Enge-Biberist',
+        'id': 1931,
+        'dt_from': dt(2023, 6, 16, 12, tzinfo=pytz.timezone('Europe/Zurich')),
+        'sample_vol': 3 # m3
+    },
+
+    {
+        'name': 'SABA Birchi',
+        'id': 1922,
+        'dt_from': dt(2023, 6, 16, 12, tzinfo=pytz.timezone('Europe/Zurich')),
+        'sample_vol': 29 # m3
     },
 ]
 
 f_dt = lambda x: dt.strftime(x, "%d.%m.%y")
 
 dt_to = dt.today() - td(days=1)
+dt_to = dt_to.astimezone(pytz.timezone('Europe/Zurich'))
+
 max_samples = 160 * 4
 
 for pb in probenehmer_infos:
