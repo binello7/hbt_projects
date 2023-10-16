@@ -13,13 +13,6 @@ probenehmer_infos = [
     },
 
     {
-        'name': 'SABA Mühlestrasse',
-        'id': 466,
-        'dt_from': dt(2023, 5, 31, tzinfo=pytz.timezone('Europe/Zurich')),
-        'sample_vol': 5 # m3
-    },
-
-    {
         'name': 'SABA Enge-Biberist',
         'id': 1931,
         'dt_from': dt(2023, 6, 16, 12, tzinfo=pytz.timezone('Europe/Zurich')),
@@ -29,7 +22,7 @@ probenehmer_infos = [
     {
         'name': 'SABA Birchi',
         'id': 1922,
-        'dt_from': dt(2023, 6, 16, 12, tzinfo=pytz.timezone('Europe/Zurich')),
+        'dt_from': dt(2023, 8, 4, 12, tzinfo=pytz.timezone('Europe/Zurich')),
         'sample_vol': 29 # m3
     },
 ]
