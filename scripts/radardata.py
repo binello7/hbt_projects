@@ -4,11 +4,15 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import xarray as xr
 
-import hbt.export as ex
+from hbt_tools import export as ex
 
 
 # Functions
 def ts_from_xarray(ds, coords):
+    '''
+    Generates a timeseries from a xarray.Dataset at the specified coordinates.
+    '''
+    
     ts = ds.sel(chx=coords[0], chy=coords[1], method='nearest')
     ts_data = ts.RR
     ts_time = ts.time
@@ -28,18 +32,6 @@ save_path = save_dir / 'radar-observations_2212.nc'
 
 files_list = list(files_dir.glob('*.nc'))
 files_list.sort()
-
-if True:
-    for i, file in enumerate(files_list):
-        print(f"File {i+1}: {file.name}")
-        with xr.open_dataset(file) as f:
-            ds = f.RR.isel(time=0)
-            if i == 0:
-                ds_new = ds.copy()
-            else:
-                ds_new = xr.concat((ds_new, ds), dim='time')
-
-    ds_new.to_netcdf(save_path)
 
 if False:
     ds = xr.open_dataset(save_path)
