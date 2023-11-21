@@ -36,11 +36,10 @@ def add_geo_features(ax):
 
 # Settings
 ## Paths
-folder_rain = (r"Q:\Projekte\1000-\1200-\1296\1296.25 Netzbewirtschaftung "
+folder_rain = Path(r"Q:\Projekte\1000-\1200-\1296\1296.25 Netzbewirtschaftung "
     r"Worblental\05 Berechnungen Grundlagen\09 Regendaten")
-folder_rain = Path(folder_rain)
 
-path_raindata = (r"Q:\Projekte\1000-\1200-\1296\1296.25 Netzbewirtschaftung "
+path_raindata = Path(r"Q:\Projekte\1000-\1200-\1296\1296.25 Netzbewirtschaftung "
     r"Worblental\05 Berechnungen Grundlagen\09 Regendaten\MeteoSchweiz"
     r"\Daten\RR_INCA_202210240900.nc")
 
@@ -74,9 +73,9 @@ title = ax.title
 add_geo_features(ax)
 # ax.scatter(*zollikofen_coords, s=9, c='r')
 # ax.text(zollikofen_coords[0]+1e3, zollikofen_coords[1]+3e3, 'Zollikofen')
-plt.show()
-exit()
+# plt.show()
 
+# Animation
 def animate(t):
     data = ds.RR.isel(time=t)
     time = ds.time.to_pandas()[t] # time as Timestamp()
@@ -91,6 +90,7 @@ def init():
     g.set_array(data)
     title.set_text(dt0_str)
     return (g, title) # must be given as tuple
+#-------------------------------------------------------------------------------
 
 ani = FuncAnimation(fig, animate, range(len(ds.time)), init_func=init)
 
