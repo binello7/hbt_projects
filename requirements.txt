@@ -1,9 +1,13 @@
 asttokens==2.4.1
 attrs==23.1.0
 certifi==2023.7.22
+cffi==1.16.0
 cftime==1.6.3
 charset-normalizer==3.3.2
+click==8.1.7
+click-plugins==1.1.1
 cligj==0.7.2
+clr-loader==0.2.6
 colorama==0.4.6
 comm==0.2.0
 contourpy==1.2.0
@@ -30,6 +34,7 @@ matplotlib==3.8.1
 matplotlib-inline==0.1.6
 mikecore==0.2.1
 mikeio==1.6.3
+mikeio1d==0.4.0
 nbformat==5.9.2
 nest-asyncio==1.5.8
 netCDF4==1.6.5
@@ -44,10 +49,12 @@ plotly==5.18.0
 prompt-toolkit==3.0.39
 psutil==5.9.6
 pure-eval==0.2.2
+pycparser==2.21
 Pygments==2.16.1
 pyparsing==3.1.1
 pyproj==3.6.1
 python-dateutil==2.8.2
+pythonnet==3.0.3
 pytz==2023.3.post1
 pywin32==306
 PyYAML==6.0.1
